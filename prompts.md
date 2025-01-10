@@ -132,3 +132,46 @@ Propor um checklist para configuração rápida do ambiente local (banco de dado
 
 
 \\\\\\\\\\\\\\\\\\ ---------------------- |||||||||||||||||||||||\ ----------------- ////////////
+
+
+
+
+Fluxo de Dados e Sincronismo
+O sincronismo unilateral com o SAP ocorre através de processos agendados. No arquivo ImportXJobs.cs, é possível observar a configuração de tarefas recorrentes utilizando a biblioteca Hangfire. As sincronizações de fornecedores, importadoras e proforma invoices são agendadas para ocorrer a cada dez minutos ou a cada minuto, dependendo da tarefa.
+
+Monitoramento e Logs
+O projeto utiliza práticas de logging para monitorar o sistema e capturar logs de erro. Ferramentas como Serilog são usadas para logging estruturado, e Application Insights pode ser utilizado para monitoramento de performance e telemetria.
+
+Segurança
+A segurança no projeto é tratada através de autenticação e autorização. A autenticação é implementada utilizando JWT (JSON Web Tokens) para garantir que apenas usuários autenticados possam acessar os endpoints da API. A autorização é gerenciada através de políticas e roles, garantindo que apenas usuários com permissões adequadas possam realizar determinadas ações. Além disso, a proteção de dados sensíveis é essencial, utilizando criptografia para armazenar informações confidenciais.
+
+Escalabilidade
+Para garantir a escalabilidade do ImportX, o projeto utiliza containers Docker e orquestradores como Kubernetes. Essas tecnologias permitem a fácil replicação e gerenciamento de instâncias do serviço, garantindo que o sistema possa lidar com aumentos de carga de forma eficiente. Além disso, a utilização de serviços de nuvem como Azure ou AWS fornece recursos adicionais para escalabilidade automática.
+
+Automação de Testes e CI/CD
+O pipeline de CI/CD é configurado utilizando ferramentas como Azure DevOps ou GitHub Actions. Esses pipelines incluem etapas para execução de testes unitários e integrados, garantindo que o código seja validado antes de ser implantado em produção. A automação de testes é essencial para manter a qualidade do código e detectar problemas antecipadamente.
+
+Documentação Técnica
+A documentação do código está atualizada e inclui a documentação dos endpoints da API utilizando Swagger, além de diagramas de fluxo e arquitetura que ajudam os desenvolvedores a entenderem a estrutura e o funcionamento do sistema. A documentação está acessível e é mantida em um repositório central, como um Wiki ou um arquivo README.md.
+
+Benchmarking de Performance
+O projeto ainda não implementou testes de carga e stress para validar a robustez do sistema em cenários de alta demanda.
+
+Checklist de Ambiente
+Para configurar rapidamente o ambiente local do projeto, siga o checklist abaixo:
+
+Instalação do Docker e Docker Compose:
+
+Certifique-se de que o Docker e o Docker Compose estão instalados na sua máquina.
+Configuração do Banco de Dados:
+
+Configure o banco de dados PostgreSQL com as variáveis de ambiente necessárias. As variáveis podem ser definidas nos arquivos de configuração, como appsettings.Development.json.
+Configuração dos Arquivos de Ambiente:
+
+Configure os arquivos de ambiente, como .env e appsettings.Development.json, com as informações necessárias para o ambiente de desenvolvimento.
+Execução de Migrações do Banco de Dados:
+
+Execute as migrações do banco de dados para garantir que a estrutura do banco de dados esteja atualizada. Isso pode ser feito utilizando o comando dotnet ef database update.
+Instruções para Iniciar os Serviços:
+
+Utilize o Docker Compose para iniciar os serviços. Execute o comando docker-compose up no diretório raiz do projeto para iniciar todos os serviços necessários.
