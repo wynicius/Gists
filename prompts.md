@@ -93,4 +93,4 @@ Cobertura da Documentação:
 Verificar se a documentação cobre a configuração do ambiente, execução de testes e detalhes da arquitetura.
 Adicionar documentação faltante para facilitar a entrada de novos desenvolvedores.
 
-// ///////////////// ---------------- ||||||||||||||||||||||||||||| --------------------------
+// ///////////////// ---------------- ||||||||||||||||||||||||||||| --------------------------\\\\\\\\\\\\\\\\\\\\\
