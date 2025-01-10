@@ -93,27 +93,3 @@ Cobertura da Documentação:
 Verificar se a documentação cobre a configuração do ambiente, execução de testes e detalhes da arquitetura.
 Adicionar documentação faltante para facilitar a entrada de novos desenvolvedores.
 
-Fluxo de Dados e Sincronismo:
-
-Detalhar como o sincronismo unilateral com o SAP ocorre: é via APIs, processos agendados ou outra solução? Qual a frequência de sincronismo?
-Monitoramento e Logs:
-
-Identificar ferramentas ou práticas usadas para monitorar o sistema e capturar logs de erro pode complementar a análise.
-Segurança:
-
-Explicar como a segurança é tratada no projeto: autenticação, autorização e proteção de dados sensíveis.
-Escalabilidade:
-
-Quais práticas ou configurações de infraestrutura garantem a escalabilidade do ImportX? Exemplo: uso de containers, orquestradores como Kubernetes, etc.
-Automação de Testes e CI/CD:
-
-Detalhar o pipeline de CI/CD se houver, e como os testes (unitários/integrados) são automatizados.
-Documentação Técnica:
-
-Garantir que a documentação do código está atualizada e que os desenvolvedores têm acesso a diagramas de fluxo e arquitetura.
-Benchmarking de Performance:
-
-Sugerir a implementação de testes de carga e stress para validar a robustez do sistema em cenários de alta demanda.
-Checklist de Ambiente:
-
-Propor um checklist para configuração rápida do ambiente local (banco de dados, Docker, variáveis de ambiente).
