@@ -127,3 +127,8 @@ Sugerir a implementação de testes de carga e stress para validar a robustez do
 Checklist de Ambiente:
 
 Propor um checklist para configuração rápida do ambiente local (banco de dados, Docker, variáveis de ambiente).
+
+
+
+
+\\\\\\\\\\\\\\\\\\ ---------------------- |||||||||||||||||||||||\ ----------------- ////////////
